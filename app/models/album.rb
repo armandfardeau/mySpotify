@@ -9,4 +9,8 @@ class Album < ApplicationRecord
   #  return Album.where.not(released_at: nil)
   #end
   
+  def youhouuu_new_visit
+    self.increment!(:views_count)
+  end
+  
 end

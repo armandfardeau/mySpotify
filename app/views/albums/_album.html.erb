@@ -1,2 +1,7 @@
 <!-- app/views/albums/_album.html.erb -->
-<h1><%= album.title%> - <%= sexy_date album.released_at %> - <%= sexy_time_ago_in_words album.released_at %></h1>
+<h1><%= link_to album.title, album_path(album) %> - 
+    <%= sexy_date album.released_at %> - 
+    <%= sexy_time_ago_in_words album.released_at %> - <%= album.views_count %></h1>
+<table>
+  <%= render album.tracks %>
+</table>
