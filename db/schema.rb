@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123162707) do
+ActiveRecord::Schema.define(version: 20170130113158) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "title"
@@ -18,6 +18,12 @@ ActiveRecord::Schema.define(version: 20170123162707) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.integer  "views_count", default: 0
+  end
+
+  create_table "tokens", force: :cascade do |t|
+    t.string   "uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "tracks", force: :cascade do |t|
